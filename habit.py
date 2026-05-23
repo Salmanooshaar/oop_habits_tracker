@@ -10,6 +10,10 @@ class Habit:
         self.completion = []
         
         current_time = datetime.datetime.now()
-        # Using isoformat() to amke it easy to store with json
+        # Using isoformat() to make it easy to store with json
         self.created_at = current_time.isoformat()
-        
+
+    def mark_completed(self):
+        """It mark the completed habit at current time"""
+        completion_time = datetime.datetime.now()
+        self.completion.append(completion_time)
