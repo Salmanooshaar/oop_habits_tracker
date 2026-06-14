@@ -7,7 +7,7 @@ class Habit:
         self. periodicity = periodicity
         
         # zero completion at first
-        self.completion = []
+        self.completions = []
         
         current_time = datetime.datetime.now()
         # Using isoformat() to make it easy to store with json
@@ -16,4 +16,4 @@ class Habit:
     def mark_completed(self):
         """It mark the completed habit at current time"""
         completion_time = datetime.datetime.now()
-        self.completion.append(completion_time)
+        self.completions.append(completion_time)
